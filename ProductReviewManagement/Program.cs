@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-
 namespace ProductReviewManagement
 {
     class Program
@@ -22,11 +21,8 @@ namespace ProductReviewManagement
                 new ProductReview(){ProducID=10,UserID=1,Rating=8,Review="nice",isLike=true},
                 new ProductReview(){ProducID=11,UserID=1,Rating=3,Review="nice",isLike=true}
             };
-            foreach (var list in productReviewList)
-            {
-                Console.WriteLine("ProductID:- " + list.ProducID + " " + "UserID:- " + list.UserID
-                    + " " + "Rating:- " + list.Rating + " " + "Review:- " + list.Review + " " + "isLike:- " + list.isLike);
-            }
+            Management management = new Management();
+            management.TopRecords(productReviewList);
         }
     }
 }
